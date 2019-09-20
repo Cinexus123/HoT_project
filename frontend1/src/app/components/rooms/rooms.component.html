@@ -1,0 +1,134 @@
+<h2 style="text-align: center; color:white">Rooms position editor</h2>
+<mat-drawer-container class="building-container" hasBackdrop="true">
+  <mat-drawer-content>
+
+    <div class="flex flex-center flex-wrap">
+      <mat-form-field style="background-color: white">
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+      </mat-form-field>
+      <span class="space"></span>
+
+
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> No.</th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>Name</th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="building">
+          <th mat-header-cell *matHeaderCellDef> Building</th>
+          <td mat-cell *matCellDef="let element"> {{element.building}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="floor">
+          <th mat-header-cell *matHeaderCellDef> Floor</th>
+          <td mat-cell
+              *matCellDef="let element"> {{element.floor ? element.floor.split('.').slice(0, -1) : element.floor}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef class="position-relative">Actions
+            <button mat-mini-fab color="primary" matTooltip="Add new building" class="add-btn" (click)="addRoom()">
+              <mat-icon>add</mat-icon>
+            </button>
+          </th>
+          <td mat-cell *matCellDef="let row">
+            <button mat-icon-button matTooltip="Click to Edit" class="iconbutton" color="primary">
+              <mat-icon aria-label="Edit" (click)="selectRoom(row); drawer.toggle(true)">edit</mat-icon>
+            </button>
+            <button mat-icon-button class="icon">
+              <mat-icon matTooltip="delete" color="warn" (click)="delete(row)">delete_forever</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+      </table>
+    </div>
+  </mat-drawer-content>
+
+
+  <mat-drawer #drawer class="example-sidenav" [opened]="selectedRoom" mode="side" position="end">
+
+
+    <button mat-icon-button (click)="drawer.toggle()" class="icon-toolbar mr-3" style="border: 1px black">
+      <mat-icon>arrow_forward_ios</mat-icon>
+    </button>
+    <mat-card>
+
+
+      <mat-card-title>Edit coordinates of rooms</mat-card-title>
+
+
+      <mat-card *ngIf="selectedRoom">
+        <mat-form-field class="example-full-width">
+          <input *ngIf="selectedRoom.name !== ''; else roomNameField" matInput placeholder="Room Name (disabled)"
+                 disabled value="{{selectedRoom.name}}">
+
+          <ng-template #roomNameField>
+            <input matInput placeholder="Room Name" [(ngModel)]="editedRoom.name">
+          </ng-template>
+        </mat-form-field>
+
+
+        <form class="floor-form">
+          <mat-form-field>
+            <input type="text" matInput placeholder="Pick building" name="buildingName"
+                   [(ngModel)]="editedRoom.building"
+                   [matAutocomplete]="auto1"/>
+            <mat-autocomplete #auto1="matAutocomplete">
+              <mat-option class="complete" *ngFor="let building of buildings" [value]="building.name"
+                          (click)="selectBuilding(building)">
+                {{building.name}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </form>
+
+        <form class="room-form">
+          <mat-form-field>
+            <input type="text" matInput placeholder="Pick floor" name="floorName" [(ngModel)]="editedRoom.floor"
+                   [matAutocomplete]="auto2"/>
+            <mat-autocomplete #auto2="matAutocomplete">
+              <mat-option class="complete" *ngFor="let floor of floors" [value]="floor.name"
+                          (click)="selectFloor(floor)">
+                {{floor.name ? floor.name.split('.').slice(0, -1) : floor.name}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </form>
+
+        <div *ngIf="selectedFloor">
+          <div class="map">
+            <div class="mapa">
+              <img #marker style="width:35px; position: absolute; z-index: 999"
+                   src="https://cdn1.iconfinder.com/data/icons/Map-Markers-Icons-Demo-PNG/128/Map-Marker-Marker-Outside-Chartreuse.png"
+                   id="marker" hidden/>
+              <img [src]="selectedFloor.image" class="mapa" (click)="img($event)"/>
+            </div>
+          </div>
+          <div class="save-button-row">
+            <button mat-raised-button color="accent" (click)="save(); drawer.toggle(false)">Save</button>
+          </div>
+        </div>
+
+
+      </mat-card>
+    </mat-card>
+  </mat-drawer>
+
+
+</mat-drawer-container>

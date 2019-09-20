@@ -1,0 +1,32 @@
+@import "~src/styles";
+
+
+mat-toolbar {
+  background: black !important;
+  color: white !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+span {
+  margin-right: 16px;
+}
+
+.space {
+  flex: 1;
+}
+
+.menu-phone {
+  display: none;
+  @include for-phone-only {
+  display: unset;
+  }
+}
+
+.menu-desktop {
+  @include for-phone-only {
+    display: none;
+  }
+}

@@ -1,0 +1,76 @@
+@import "~src/styles";
+.test {
+  width: 100%;
+  height: 100vh;
+  padding: 16px;
+  background: white;
+}
+
+
+.floor_row {
+  position: relative;
+  height: 200px;
+}
+
+.building-container {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.building-details-site {
+  width: 50%;
+}
+
+.building-content {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.space {
+  flex: 1 1 auto;
+}
+
+.add-btn {
+  background: #2ecc71;
+}
+
+.title {
+  margin-right: 0;
+  width: 50%;
+}
+
+.icon:hover {
+  background: #00000012;
+}
+
+.flex {
+  display: flex;
+}
+
+.save-btn {
+  color: white;
+  background: #46ab33;
+}
+
+.img-card {
+  box-shadow: 2px 0 5px;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.buildings-list {
+  width: 90vw;
+}
+
+.side-bar{
+  @include for-desktop-up{
+    width: 50%;
+  };
+
+}

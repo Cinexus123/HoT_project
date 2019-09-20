@@ -1,0 +1,82 @@
+<h2 style="text-align: center; color:white">Devices</h2>
+<mat-drawer-container>
+  <mat-drawer-content>
+
+    <div class="flex flex-center flex-wrap">
+      <mat-form-field style="background-color: white">
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+      </mat-form-field>
+
+
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <!-- Name Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> No.</th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="nickName">
+          <th mat-header-cell *matHeaderCellDef>User Name</th>
+          <td mat-cell *matCellDef="let element"> {{element.nickName}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="macAddress">
+          <th mat-header-cell *matHeaderCellDef> Mac Address</th>
+          <td mat-cell *matCellDef="let element"> {{element.macAddress}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="deviceName">
+          <th mat-header-cell *matHeaderCellDef >Device Name</th>
+          <td mat-cell *matCellDef="let element"> {{element.deviceName}} </td>
+        </ng-container>
+
+
+
+
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef>Actions</th>
+          <td mat-cell *matCellDef="let row">
+            <button mat-icon-button matTooltip="Click to Edit" class="iconbutton" color="primary">
+              <mat-icon aria-label="Edit" (click)="select(row); drawer.toggle(true)">edit</mat-icon>
+            </button>
+            <button mat-icon-button matTooltip="Click to Delete" class="iconbutton" color="warn">
+              <mat-icon aria-label="Delete" (click)="delete(row)">delete</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+      </table>
+    </div>
+  </mat-drawer-content>
+
+  <mat-drawer #drawer class="example-sidenav side-bar" mode="side" position="end">
+    <button mat-icon-button (click)="drawer.toggle()" class="icon-toolbar mr-3" style="border: 1px black">
+      <mat-icon>arrow_forward_ios</mat-icon>
+    </button>
+
+    <mat-card *ngIf="selectedDevice">
+      <mat-card-title>Edit Devices</mat-card-title>
+      <br>User Name<br>
+      <input [(ngModel)]="editedDevice.nickName">
+      <br><br>Device Name<br>
+      <input [(ngModel)]="editedDevice.deviceName">
+      <br><br>Mac Address<br>
+      <input [(ngModel)]="editedDevice.macAddress">
+
+
+      <div class="save-button-row">
+        <button mat-raised-button color="accent" (click)="save(); drawer.toggle(false)">Save</button>
+      </div>
+
+
+    </mat-card>
+  </mat-drawer>
+</mat-drawer-container>
+

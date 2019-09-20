@@ -1,0 +1,38 @@
+<h2 style="text-align: center; color:white">Buildings</h2>
+<mat-drawer-container class="building-container" hasBackdrop="true">
+  <mat-drawer-content class="p-5">
+    <div class="flex flex-center flex-wrap">
+      <mat-card class="buildings-list">
+        <div class="flex  flex-center">
+
+          <span class="space"></span>
+          <button mat-mini-fab color="primary" matTooltip="Add new building" (click)="addBuilding()">
+            <mat-icon>add</mat-icon>
+          </button>
+        </div>
+        <mat-action-list>
+          <mat-list-item class="mat-card mb-1 " *ngFor="let building of buildings">
+            <span>{{building.name}}</span>
+            <span class="space"></span>
+            <button mat-icon-button class="icon">
+              <mat-icon matTooltip="delete" color="warn" (click)="delete(building)">delete_forever</mat-icon>
+            </button>
+            <button mat-icon-button class="icon">
+              <mat-icon matTooltip="edit" color="primary" (click)="select(building); drawer.toggle(true)">edit
+              </mat-icon>
+            </button>
+          </mat-list-item>
+        </mat-action-list>
+      </mat-card>
+    </div>
+  </mat-drawer-content>
+  <mat-drawer #drawer mode="side" class="side-bar" [opened]="selectedBuilding != null" position="end"
+              disableClose="true">
+    <app-building-details (hide)="selectedBuilding = null"
+                          (refresh)="refresh()"
+                          [building]="selectedBuilding"
+                          (newBuilding)="addNewBuilding($event)"
+                          *ngIf="selectedBuilding"
+    ></app-building-details>
+  </mat-drawer>
+</mat-drawer-container>

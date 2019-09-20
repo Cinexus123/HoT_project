@@ -1,0 +1,39 @@
+<div *ngIf="building" class="mb-1">
+  <mat-toolbar color="primary" class="toolbar-grid pt-3 pb-3">
+    <div class="toolbar-btns">
+      <button mat-icon-button (click)="hide.emit()" class="icon-toolbar mr-3">
+        <mat-icon>arrow_forward_ios</mat-icon>
+      </button>
+      <button mat-raised-button class="save-btn" (click)="save()">Save</button>
+    </div>
+    <div class="inputFiles">
+      <input type="file"
+             id="file"
+             class="custom-file-input"
+             multiple
+             (change)="handleFileInput($event)">
+    </div>
+    <div class="buildingName">
+      <mat-form-field>
+        <input matInput placeholder="Name"
+               [(ngModel)]=editedBuilding.name
+               [value]="editedBuilding.name">
+      </mat-form-field>
+    </div>
+
+  </mat-toolbar>
+  <mat-list>
+    <mat-list-item class="upload-info">
+      Please upload images in format png and HD resolution!!!
+    </mat-list-item>
+    <mat-list-item class="card mb-1 floor-row" *ngFor="let floor of editedBuilding.floors">
+      <button mat-icon-button (click)="deleteFloor(floor)" class="icon mr-3">
+        <mat-icon>clear</mat-icon>
+      </button>
+      <img class="mr-3" [src]="floor.image" alt="floor">
+      <mat-form-field>
+        <input matInput [(ngModel)]="floor.name" placeholder="Floor name" [value]="floor.name">
+      </mat-form-field>
+    </mat-list-item>
+  </mat-list>
+</div>

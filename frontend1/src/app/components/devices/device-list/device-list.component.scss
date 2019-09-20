@@ -1,0 +1,36 @@
+mat-drawer-container {
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+
+table {
+  width: 80%;
+}
+
+.flex {
+  margin-bottom: auto;
+  display: flex;
+}
+.flex-center {
+  justify-content: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 80%;
+}
+.example-sidenav {
+  padding: 20px;
+  width: 40%;
+  position: fixed;
+}
+
+.save-button-row
+{
+  margin-top: 20px;
+}

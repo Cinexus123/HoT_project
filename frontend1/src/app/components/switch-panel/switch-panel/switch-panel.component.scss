@@ -1,0 +1,80 @@
+@import "~src/styles";
+
+mat-drawer-container {
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 80%;
+}
+
+.flex {
+  margin-bottom: auto;
+  display: flex;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 80%;
+}
+
+.icon:hover {
+  background: #00000012;
+}
+
+.description {
+  height: 100px;
+
+}
+
+img {
+  width: 100%;
+}
+
+
+.space {
+  flex: 1;
+}
+
+mat-card-title {
+  font-size: 18px;
+  color: grey;
+}
+
+.mapa {
+  position: relative;
+}
+
+
+.example-sidenav {
+  padding: 20px;
+  width: 60%;
+  height: 100%;
+  position: fixed;
+}
+
+
+.save-button-row {
+  margin-top: 20px;
+}
+
+.marker {
+  width: 35px;
+  position: absolute;
+}
+
+.add-btn{
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  right: 0;
+}

@@ -1,0 +1,102 @@
+$input-color: white;
+
+.custom-file-input {
+  color: transparent;
+  position: relative;
+  opacity: 1;
+  height: 125px;
+  width: 125px;
+  border-radius: 7px;
+  border: dashed 7px $input-color;
+
+
+  &::before {
+    content: "Drop Floors";
+    text-align: center;
+    color: $input-color;
+    font-size: initial;
+    width: 100%;
+    display: inline-block;
+    border-radius: 3px;
+    -webkit-user-select: none;
+    cursor: pointer;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    background: $input-color;
+
+    &::before {
+      color: #3f51b5;
+    }
+  }
+
+  &::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+
+}
+
+img {
+  height: 150px;
+  border: solid black 1px;
+}
+
+.floor-row {
+  height: 160px;
+  width: 100%;
+}
+
+.toolbar-btns {
+  grid-area: buttons;
+}
+
+.upload-info{
+  font-weight: 600;
+}
+.inputFiles {
+  grid-area: drop;
+}
+
+.buildingName {
+  grid-area: name;
+}
+
+.toolbar-grid {
+  display: grid;
+  height: 160px;
+  grid-template-columns: auto 150px;
+  grid-template-rows: auto;
+  grid-template-areas: "buttons drop" "name drop" "info info";
+}
+
+.icon:hover {
+  background: #ededed;
+}
+
+.icon-toolbar:hover {
+  background: #ededed33;
+}
+
+::ng-deep .snackbar {
+  &-info {
+    background: #3f51b5;
+    color: white;
+  }
+
+  &-error {
+    color: white;
+    background: red;
+  }
+
+  &-save {
+    color: white;
+    background: #27ae60;
+  }
+
+}
+

@@ -1,0 +1,66 @@
+.space {
+  flex: 1 1 auto;
+}
+
+.buildings-container {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+
+.buildings-list {
+  width: 90vw;
+}
+.icon:hover {
+  background: #00000012;
+}
+
+.flex {
+  display: flex;
+  flex-flow: column;
+  align-content: center;
+}
+.flex-center {
+  justify-content: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.example-sidenav {
+  padding: 20px;
+  width: 60%;
+  height: 100%;
+  position: fixed;
+}
+
+mat-drawer-container {
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+.save-button-row
+{
+  margin-top: 20px;
+}
+
+.mapa {
+  position: relative;
+}
+
+
+table {
+  width: 80%;
+}
+
+img{
+  width:100%;
+}
+
+.add-btn{
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  right: 0;
+}

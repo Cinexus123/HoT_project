@@ -1,0 +1,89 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.video-container {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+@mixin for-phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+
+@mixin for-desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin for-desktop-up-1400 {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
+
+html {
+  min-height: 100% !important;
+  height: 100%;
+}
+
+body {
+  background-color: transparent;
+  height: 100%;
+}
+
+app-root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+app-root > *:last-child {
+  flex-grow: 1;
+}
+
+.mat-drawer-container {
+  background-color: transparent;
+}
+
+::ng-deep .snackbar {
+  &-info {
+    background: #3f51b5;
+    color: white;
+  }
+
+  &-error {
+    color: white;
+    background: red;
+  }
+
+  &-save {
+    color: white;
+    background: #27ae60;
+  }
+
+}

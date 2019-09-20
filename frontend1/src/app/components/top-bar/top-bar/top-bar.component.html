@@ -1,0 +1,28 @@
+<mat-toolbar>
+  <img src="assets/img/rakietrack.svg" alt="Rocket" height="100px" width="100px" [routerLink]="['/main']"/>
+  <span class="space"></span>
+
+
+  <app-top-bar-item class="menu-desktop"
+                    *ngFor="let item of items"
+                    [route]="item.route" [icon]="item.icon" [label]="item.label">
+  </app-top-bar-item>
+
+  <button mat-button [matMenuTriggerFor]="menu" class="menu-phone">
+    <mat-icon>
+      menu
+    </mat-icon>
+  </button>
+
+  <mat-menu #menu="matMenu">
+    <app-top-bar-item
+      *ngFor="let item of items"
+      [route]="item.route" [icon]="item.icon" [label]="item.label">
+    </app-top-bar-item>
+  </mat-menu>
+
+
+</mat-toolbar>
+
+
+

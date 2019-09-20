@@ -1,0 +1,59 @@
+2019-08-31 11:46:34.982 [main] INFO  com.api.ApiApplication                             - Starting ApiApplication on LAPTOP-TKHKE2AL with PID 23624 (C:\Users\Szaqku\Desktop\Praktyki\RAKIETA\backend\build\classes\java\main started by Szaqku in C:\Users\Szaqku\Desktop\Praktyki\RAKIETA\backend)
+2019-08-31 11:46:34.985 [main] INFO  com.api.ApiApplication                             - No active profile set, falling back to default profiles: default
+2019-08-31 11:46:36.434 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-31 11:46:36.440 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-31 11:46:36.546 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Finished Spring Data repository scanning in 100ms. Found 4 repository interfaces.
+2019-08-31 11:46:36.552 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-08-31 11:46:36.553 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-31 11:46:36.573 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport  - Spring Data LDAP - Could not safely identify store assignment for repository candidate interface com.api.repositories.DeviceRepository.
+2019-08-31 11:46:36.573 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport  - Spring Data LDAP - Could not safely identify store assignment for repository candidate interface com.api.repositories.NetworkRepository.
+2019-08-31 11:46:36.573 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport  - Spring Data LDAP - Could not safely identify store assignment for repository candidate interface com.api.repositories.RoomRepository.
+2019-08-31 11:46:36.574 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport  - Spring Data LDAP - Could not safely identify store assignment for repository candidate interface com.api.repositories.SettingRepository.
+2019-08-31 11:46:36.574 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Finished Spring Data repository scanning in 21ms. Found 0 repository interfaces.
+2019-08-31 11:46:36.865 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2019-08-31 11:46:36.874 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2019-08-31 11:46:36.970 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c26eb294] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-31 11:46:36.992 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$2d606dc3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-31 11:46:37.001 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-31 11:46:37.245 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer                   - Tomcat initialized with port(s): 8080 (http)
+2019-08-31 11:46:37.261 [main] INFO  o.a.coyote.http11.Http11NioProtocol                - Initializing ProtocolHandler ["http-nio-8080"]
+2019-08-31 11:46:37.273 [main] INFO  o.a.catalina.core.StandardService                  - Starting service [Tomcat]
+2019-08-31 11:46:37.273 [main] INFO  o.a.catalina.core.StandardEngine                   - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-31 11:46:37.456 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring embedded WebApplicationContext
+2019-08-31 11:46:37.456 [main] INFO  o.s.web.context.ContextLoader                      - Root WebApplicationContext: initialization completed in 2166 ms
+2019-08-31 11:46:37.646 [main] INFO  com.zaxxer.hikari.HikariDataSource                 - HikariPool-1 - Starting...
+2019-08-31 11:46:37.746 [main] INFO  com.zaxxer.hikari.HikariDataSource                 - HikariPool-1 - Start completed.
+2019-08-31 11:46:37.812 [main] INFO  o.h.jpa.internal.util.LogHelper                    - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-31 11:46:37.870 [main] INFO  org.hibernate.Version                              - HHH000412: Hibernate Core {5.3.10.Final}
+2019-08-31 11:46:37.872 [main] INFO  org.hibernate.cfg.Environment                      - HHH000206: hibernate.properties not found
+2019-08-31 11:46:37.996 [main] INFO  o.h.annotations.common.Version                     - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-08-31 11:46:38.148 [main] INFO  org.hibernate.dialect.Dialect                      - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-08-31 11:46:38.743 [main] INFO  o.h.t.s.internal.SchemaCreatorImpl                 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@153d14e3'
+2019-08-31 11:46:38.746 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-31 11:46:39.096 [main] INFO  c.a.s.impl.FileStorageServiceImpl                  - Current upload directory path: C:/Users/Szaqku/Desktop/Praktyki/RAKIETA/backend/
+2019-08-31 11:46:39.200 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler                    - Initializing ExecutorService 'taskScheduler'
+2019-08-31 11:46:39.229 [main] INFO  c.api.services.impl.EmailServiceImpl               - State of thread: : NEW
+2019-08-31 11:46:39.229 [main] INFO  c.api.services.impl.EmailServiceImpl               - State of thread: : RUNNABLE
+2019-08-31 11:46:39.229 [main] INFO  c.api.services.impl.EmailServiceImpl               - Server started with id: 38
+2019-08-31 11:46:39.453 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-31 11:46:39.593 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-08-31 11:46:39.779 [main] INFO  o.s.s.web.DefaultSecurityFilterChain               - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5e97da56, org.springframework.security.web.context.SecurityContextPersistenceFilter@7f33ad20, org.springframework.security.web.header.HeaderWriterFilter@481eb705, org.springframework.web.filter.CorsFilter@6e8f3b76, org.springframework.security.web.authentication.logout.LogoutFilter@6d3194ff, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@c0a8787, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3f473daf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3c4231e5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6cfe32cd, org.springframework.security.web.session.SessionManagementFilter@c5c2a84, org.springframework.security.web.access.ExceptionTranslationFilter@73eaae1e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@55e3b64d]
+2019-08-31 11:46:39.903 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor                     - Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-31 11:46:40.027 [main] INFO  o.s.l.c.s.AbstractContextSource                    - Property 'userDn' not set - anonymous context will be used for read-write operations
+2019-08-31 11:46:40.157 [main] INFO  o.s.i.endpoint.EventDrivenConsumer                 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2019-08-31 11:46:40.157 [main] INFO  o.s.i.c.PublishSubscribeChannel                    - Channel 'application.errorChannel' has 1 subscriber(s).
+2019-08-31 11:46:40.157 [main] INFO  o.s.i.endpoint.EventDrivenConsumer                 - started _org.springframework.integration.errorLogger
+2019-08-31 11:46:40.157 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper         - Context refreshed
+2019-08-31 11:46:40.172 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper         - Found 1 custom documentation plugin(s)
+2019-08-31 11:46:40.210 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner               - Scanning for api listing references
+2019-08-31 11:46:40.404 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator          - Generating unique operation named: deleteUsingDELETE_1
+2019-08-31 11:46:40.405 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator          - Generating unique operation named: getAllDevicesUsingGET_1
+2019-08-31 11:46:40.431 [scheduling-1] INFO  com.api.component.ScheduledTasks                   - Names of networks pulled from provider
+2019-08-31 11:46:40.433 [main] INFO  o.a.coyote.http11.Http11NioProtocol                - Starting ProtocolHandler ["http-nio-8080"]
+2019-08-31 11:46:40.458 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer                   - Tomcat started on port(s): 8080 (http) with context path ''
+2019-08-31 11:46:40.460 [main] INFO  com.api.ApiApplication                             - Started ApiApplication in 6.148 seconds (JVM running for 7.325)
+2019-08-31 11:46:40.468 [main] INFO  com.api.component.ApplicationEvent                 - Application is running on http://hotdev.ncdc:8280/api
+2019-08-31 11:46:40.565 [scheduling-1] INFO  o.h.h.i.QueryTranslatorFactoryInitiator            - HHH000397: Using ASTQueryTranslatorFactory
+2019-08-31 11:46:40.794 [scheduling-1] INFO  com.api.component.ScheduledTasks                   - Added networks: [B1, A23, A17, C16, Trk4, Trk2, B11, B21, B15, B2, B20, B6, B10, B5, A21, C6, B18, Trk3, B16, A4, B9, A9, B8, A3, A24, B17, B19, A14, A20, E1, A15, C17, A10, B3, A8, E2, B12, B7, E3, B14, A13, A7, B24, A18, C14, A1, C20, C15, C24, C7, C22, C8, Trk1, C21, C9, C1, C13, A22, C23, A19, C19, B4, C12, A11, C2]
